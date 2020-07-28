@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         signInBt=(Button) findViewById(R.id.signInBt);
         logInBt=(Button) findViewById(R.id.logInBt);
+        
         signInBt.setOnClickListener(new View.OnClickListener()
        {
 			

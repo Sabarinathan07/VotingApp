@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sabari.demo.EventName;
 import com.sabari.demo.R;
@@ -17,7 +18,7 @@ import com.sabari.demo.ListListener;
 
 public class MyAdapter extends BaseAdapter {
 	Context context;
-	ArrayList list;
+	ArrayList<EventName> list;
 	LayoutInflater inflater;
 	ListListener listener;
 
@@ -57,7 +58,7 @@ public class MyAdapter extends BaseAdapter {
         add=(ImageButton) v.findViewById(R.id.add);
         name=(TextView) v.findViewById(R.id.name);
         likes=(TextView) v.findViewById(R.id.likes);
-        EventName eventName = (EventName) list.get(pos);
+        EventName eventName =  list.get(pos);
         name.setText(eventName.getNames());
         likes.setText("likes"+eventName.getLikes()+"");
         add.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,8 @@ public class MyAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View view) {
 				// TODO Auto-generated method stub
+				
+				
 					listener.onItemClicked(pos);
 			}
 		});

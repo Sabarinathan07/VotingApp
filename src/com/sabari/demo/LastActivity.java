@@ -21,11 +21,15 @@ public class LastActivity extends Activity implements ListListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_last);
 		 listview=(ListView) findViewById(R.id.lv);
+		
 	        list.add(new EventName("Sabari",0));
 	        list.add(new EventName("Deepi",0));
 	        list.add(new EventName("Divi",0));
 	        list.add(new EventName("Angel",0));
 	        list.add(new EventName("Keerthi",0));
+	        list.add(new EventName("Sandhya",0));
+	        list.add(new EventName("Shruthi",0));
+	        list.add(new EventName("Ruth",0));
 	        list.add(new EventName("Suji",0));
 	        list.add(new EventName("Swetha",0));
 	        list.add(new EventName("Siva",0));
@@ -33,6 +37,8 @@ public class LastActivity extends Activity implements ListListener{
 	        list.add(new EventName("Madhi",0));
 	        list.add(new EventName("Sandy",0));
 	        list.add(new EventName("Moni",0));
+	        
+	       
 	        
 	        adapter=new MyAdapter(LastActivity.this,list,this);
 	        listview.setAdapter(adapter);
